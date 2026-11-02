@@ -1,4 +1,4 @@
-# Dissertation
+# LaTex Dissertation Template
 
 ## Organization
 
@@ -38,6 +38,13 @@ document.
 
 ## Compilation
 
+### Overleaf
+
+Copy this repository into a new overleaf project to start a new dissertation on
+overleaf.
+
+### Nix
+
 Using nix you can install all dependencies and compile the document with
 
 ```
@@ -52,6 +59,10 @@ make
 
 ## Dependencies
 
+On Overleaf, all LaTex dependencies should already be installed, but all figures
+should be in a format ready for inclusion when uploading. If you're working
+locally, you will need the following.
+
 ### Latex
 
 The flake and Makefile use `lualatex` and `biber` to compile the document.
@@ -59,8 +70,13 @@ The flake and Makefile use `lualatex` and `biber` to compile the document.
 ### TexLive
 
 The nix flake currently installs a full TexLive distribution with all available
-TexLive packages so I don't have to deal with missing packages while writing.
+TexLive packages so you don't have to deal with missing packages while writing.
 
 ### librsvg
 
-To convert SVGs in `figures` to PDF for compilation.
+If you have SVGs you want to convert SVGs in `figures` to PDF for compilation.
+
+### Other software
+
+You can bundle all plotting data, software, and code here by specifying them in
+the nix flake.
