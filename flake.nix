@@ -71,6 +71,7 @@
       ];
       shellHook = ''
         # run on shell startup
+        export SOURCE_DATE_EPOCH=$(date +%s)
       '';
     };
   });
